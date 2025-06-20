@@ -18,6 +18,8 @@ public class WeatherController {
         this.weatherService = weatherService;
     }
 
+
+//    curl --location 'http://localhost:8080/api/data?city=Delhi'
     @GetMapping("/data")
     public ResponseEntity<WeatherResponse> getWeatherData(@RequestParam String city) {
         WeatherResponse weatherData = weatherService.getWeatherData(city);
