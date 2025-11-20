@@ -1,7 +1,7 @@
-package com.test.controller;
+package com.users.data.management.controller;
 
-import com.test.dto.UserDto;
-import com.test.service.UserService;
+import com.users.data.management.payload.UserDto;
+import com.users.data.management.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +16,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+//    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/create")
     public UserDto createUser(@RequestBody UserDto userDto) {
         return userService.createUser(userDto);

@@ -1,13 +1,21 @@
-package com.test.dto;
+package com.users.data.management.model;
 
+import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
+@Entity
 @Getter
 @Setter
-public class UserDto {
+@RequiredArgsConstructor
+@Table(name = "Users")
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    @Column(nullable = false, unique = true)
     private String mobile;
     private String email;
 
