@@ -12,14 +12,6 @@ public class UserDto {
         this.mobile = mobile;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getMobile() {
-        return mobile;
-    }
-
     @Override
     public String toString() {
         return "UserDto{" +
